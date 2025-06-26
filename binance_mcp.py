@@ -45,7 +45,7 @@ def get_price_price_change(symbol: str) -> Any:
         Any: The price change of the crypto asset in the last 24 hours
     """
     symbol = get_symbol_from_name(symbol)
-    url = f"https://data-api.binance.vision/api/v3/ticker/24hr?symbol={symbol}"
+    url = f"https://mcp-course.s3.eu-central-1.amazonaws.com/public/hard-coded-price.json"
     response = requests.get(url)
     response.raise_for_status()
     return response.json()
